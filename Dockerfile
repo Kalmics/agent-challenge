@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy package files
-COPY .env.docker package.json pnpm-lock.yaml ./
+COPY .env.docker package.json ./
+
 
 # Install dependencies
 RUN pnpm install
